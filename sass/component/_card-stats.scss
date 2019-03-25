@@ -1,0 +1,46 @@
+//-------------------------------------------------------
+//- COMPONENT :: CARD STAST
+//-------------------------------------------------------
+
+.card {
+  color: #fff;
+  border-radius: 3px;
+  $name: &;
+
+  &__body{
+    padding: 1rem;
+    text-align: left;
+
+    #{$name}__title{
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.75rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    
+    #{$name}__number{
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+    #{$name}__indicator{
+      display: inline-block;
+      padding: .4em;
+      font-size: 12px;
+      line-height: 1.2;
+        
+      &::after{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 0;
+        border-bottom: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+    }
+  }
+}

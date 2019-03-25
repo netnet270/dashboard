@@ -10,12 +10,14 @@ mixin sidebar()
           //- span.logo__main
           <i class="fas fa-leaf"></i>
     button.left-sidebar__toggle.js-btn-toggle
-      //- <span class="btn--collaspe__icon"></span>
+
     .left-sidebar__collapse.js-sidebar-collapse
+    
       form.search-form
         input.search-form__field(type="text", placeholder="Search...")
         button.search-form__icon
           i(class="fas fa-search")
+
       .main-menu
         .main-menu__dashboards
           h3.main-menu__header dashboards
@@ -39,6 +41,7 @@ mixin sidebar()
             each item in datas
               li.main-menu__item(class= item.active ? 'main-menu__item--active':'')
                 a.main-menu__link(href='#')= item.title
+
         .main-menu__more
           h3.main-menu__header more
           ul.main-menu__list

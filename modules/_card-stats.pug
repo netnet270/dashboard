@@ -1,0 +1,13 @@
+//-------------------------------------------------------
+//- Modules :: card stats
+//-------------------------------------------------------
+
+mixin card-stats({title, number, indicator, sparkline})
+  .card 
+    .card__body 
+      .card__title= title
+      .card__data
+        span.card__number= number
+        span.card__indicator= indicator
+    .card__footer
+      canvas(id= sparkline)

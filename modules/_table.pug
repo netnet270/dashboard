@@ -1,0 +1,13 @@
+//-------------------------------------------------------
+//- Modules :: Theme
+//-------------------------------------------------------
+
+mixin table-statistic(data)
+  .widget 
+    h4.widget__header= data.title
+    ul.widget__list
+      each item in data.list
+        li.widget__item
+          a.widget__link(href= item.href ? item.href : '#')
+            span.widget__title= item.title
+            span.widget__progress= item.progess
