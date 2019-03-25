@@ -1,0 +1,24 @@
+extends ./modules/_core
+
+block head
+  +head()
+
+block body
+  .overlay-mobile 
+  #main-wapper
+    .container 
+      .row 
+        .col-3 
+          +sidebar()
+        .col-9
+          +content()
+
+
+
+
+
+
+   
+
+
+

@@ -1,0 +1,43 @@
+//-------------------------------------------------------
+//- Modules :: Content
+//-------------------------------------------------------
+
+mixin content()
+  .js-main-body.main-body
+    .container 
+      .row
+        header.header 
+          .header__pull-left 
+            p.header__pretitle DASHBOARDS
+            h2.header__title Overview
+          .header__pull-right
+            form.date-picker
+              <input type="text" id="datepicker">
+          
+          //- section-chart
+
+        section.section-chart.section
+          .row 
+            .col-4 
+              .chart 
+                .chart__top 
+                  canvas#myChart1
+                .chart__body 
+                  p.chart__text Traffic 
+                  h4.chart__title New vs Returning
+            .col-4 
+              .chart 
+                .chart__top 
+                  canvas#myChart2
+                .chart__body 
+                  p.chart__text Revenue 
+                  h4.chart__title New vs Recurring
+            .col-4 
+              .chart 
+                .chart__top 
+                  canvas#myChart3
+                .chart__body 
+                  p.chart__text Traffic 
+                  h4.chart__title Direct vs Referrals
+                
+                

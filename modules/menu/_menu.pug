@@ -1,0 +1,31 @@
+//-------------------------------------------------------
+//- Modules :: Menu
+//-------------------------------------------------------
+
+-
+  var menus = [
+    {
+      title: "Overview", 
+      active: true
+    },
+    { 
+      title: "Order history"
+    },
+    { 
+      title: "Fluid layout"
+    },
+    {
+      title: "Icon nav"
+    }
+  ]
+
+mixin main-menu()
+  #sidebar-menu.main-menu-container
+    ul.main-menu
+      li.main-menu__header dashoards
+      each item in menus
+        li.main-menu__item.js-menu-item(class=item.active ? 'main-menu__item--active' : '')
+          a.main-menu__link.js-menulink(href= href ? href : "#")= item.title
+          
+                          
+                                                    
