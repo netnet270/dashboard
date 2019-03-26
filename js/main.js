@@ -1,12 +1,83 @@
-$(document).ready(function(){
-  // sidebarCollapse();
-  // menu();
-  // dropdown();
-  
-  chart('myChart1');
-  chart('myChart2');
-  chart('myChart3');
+$(window).on('load', function(){
+  // datepicker
+
+  $('#datepicker').datepicker();
+
+  //chart
+  $('.js-chart').each(function(){
+    dataLabel = $(this).attr("labels");
+    dataSet = $(this).attr("dataset");
+    
+    parseDataset = JSON.parse(dataSet); 
+    parseDataLabel = JSON.parse(dataLabel);
+
+    var chart = new Chart( $(this), {
+        type: 'doughnut',
+        
+        data: {
+          labels: parseDataLabel,
+          datasets: [{
+            data: parseDataset,
+            borderColor: '#252830',
+            backgroundColor: ['#1ca8dd', '#1bc98e'],
+            borderWidth: 2,
+            hoverBorderColor: "transparent"
+          }]
+        },
+
+        options: {
+          cutoutPercentage: 80,
+          responsive: true,
+          legend: {
+           display:false
+          }
+        }
+    });
+  })
+
+  $(".js-stats-canvas").each(function () {
+    dataSet = $(this).data("dataset");
+    new Chart($(this), {
+      type: 'line',
+      data: {
+        datasets: [
+          {
+            fill: !0,
+            backgroundColor: "rgba(255,255,255,.3)",
+            borderColor: "#fff",
+            pointBorderColor: "#fff",
+            lineTension: .25,
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            pointHitRadius: 20,
+            data: dataSet,
+          }
+        ],
+        labels: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+      },
+      options: {
+        animation: {
+          duration: 0
+        },
+        legend: {
+          display: !1
+        },
+        scales: {
+          xAxes: [{
+            display: !1
+          }],
+          yAxes: [{
+            display: !1
+          }]
+        },
+        tooltips: {
+          enabled: !1
+        }
+      }
+    });
+  });
 })
+
   // sidebar-collapse
 
   function sidebarCollapse(){
@@ -21,83 +92,6 @@ $(document).ready(function(){
       });
     })
   }
- 
-  //Menu 
-  function menu(){
-    $('.js-menu-item').each(function () {
-      $(this).children('.js-menulink').on('click', function () {
-        var menuItem = $(this).parent('.js-menu-item');
-        if(menuItem.hasClass('main-menu__item--active')) {
-          menuItem.children('.js-submenu').slideUp(250);
-          menuItem.removeClass('main-menu__item--active');
-        }
   
-        else {
-          menuItem.children('.js-submenu').slideDown(250);
-          menuItem.addClass('main-menu__item--active');
-        }
-      })
-    })
-  }
 
-  //dropdown
-  function dropdown(){
-    $('.js-dropdown-toggle').on('click', function(){
-      var dropdown = $(this).parent('.js-dropdown');
-      var droplist =  dropdown.children('.js-dropdown-list');
-      $('.js-dropdown-list').not(droplist).fadeOut(250);
-      droplist.fadeToggle(250);
-    })
   
-    $(document).on('click', function(event) {
-      if (!$(event.target).closest('.js-dropdown').length) {
-          $(".js-dropdown-list").fadeOut(250);
-      }
-    });
-  }
- 
-  //carousel 
-  function carousel(item, element, time){
-    $(item + ':gt(0)').hide();
-
-    setInterval(function(){
-      $(item+ ':first')
-        .fadeOut(1000)
-        .next()
-        .fadeIn(1000)
-        .end()
-        .appendTo(element);
-    }, time);
-  }
-
-  function chart(element){
-    var ctx = document.getElementById(element).getContext('2d');
-    var chart = new Chart(ctx, {
-        type: 'doughnut',
-        
-        data: {
-          labels: [
-            'Returning', 
-            'New'
-          ],
-            datasets: [{
-              data: [230, 130],
-              backgroundColor: ['#1ca8dd', '#1bc98e'],
-          }],
-        },
-
-        options: {
-          responsive: true,
-          legend: {
-            position: 'top',
-          },
-
-          animation: {
-            animateScale: true,
-            animateRotate: true
-          }
-        }
-    });
-  }
- 
-

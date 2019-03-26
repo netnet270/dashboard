@@ -19,6 +19,7 @@ body {
 
 .main-body{
   //header
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -39,16 +40,52 @@ body {
       color: #fff;
       font-size: 2rem;
     }
+
+    .date-picker{
+      position: relative;
+      width: 180px;
+      &__icon{
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        color: #ccc;
+      }
+      &__field {
+        width: 100%;
+        padding: 0.375rem 0.5rem 0.375rem 1.7rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #fff;
+        background-color: #434857;
+        background-clip: padding-box;
+        border: 1px solid #434857;
+        border-radius: 0.25rem;
+
+        &:focus {
+          color: #495057;
+          background-color: #fff;
+          border-color: #71cced;
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.25);
+        }
+      }
+    }
   }
   &__line {
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 30px;
     border: 0;
     border-top: 1px solid #434857;
   }
+  .line {
+    margin-top: 1rem;
+  }
+
   //section-chart 
 
   .section-chart {
+    margin-top: 3rem ;
+
     .chart {
       &__body {
         text-align: center;
@@ -63,10 +100,18 @@ body {
         line-height: 1.2;
         color: #fff;
       }
+      &__doughnut{
+        width: 190px!important;
+        height: 195px!important;
+        margin: 0 auto 15px;
+      }
     }
   }
+
   //quick stats
+
   .quick-stats{
+
     &__header{
       position: relative;
       font-size: 12px;
@@ -114,5 +159,105 @@ body {
   }
 }
 
+//table-statistic 
 
+.table-countries, 
+.table-pages,
+.table-devices{
+  margin-bottom: 3rem;
+  &__title{
+    display: block;
+    padding: 1rem 1.25rem;
+    margin-bottom: -1px;
+    font-weight: 400;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #434857;
+    font-size: 1rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+    
+  &__item{
+    list-style: none;
+  }
   
+  &__link {
+    color: #cfd2da;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: -1px;
+    background-color: transparent;
+    border: 1px solid #434857;
+    transition: all 0.3s;
+
+    &:hover{
+      color: #cfd2da;
+      background-color: #434857;
+    }
+    &:active {
+      color: #000;
+      background-color: #e9ecef;
+    }
+
+    &:last-child{
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+  }
+  &__text {
+    padding: 0.75rem 1.25rem;
+  }
+  &__number{
+    display:inline-block;
+    padding-right: 1.25rem;
+  }
+}
+
+.table-countries {
+  &__text {
+    display: block;
+    background-color: #1e2127;
+    padding: 0.75rem 1.25rem; 
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    vertical-align: middle;
+  } 
+  &__number{
+    display:inline-block;
+    padding-right: 1.25rem;
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  margin-top: 2px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}

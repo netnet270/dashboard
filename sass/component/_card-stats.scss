@@ -29,18 +29,42 @@
       font-size: 12px;
       line-height: 1.2;
         
-      &::after{
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        margin-left: 2px;
-        vertical-align: middle;
-        border-top: 0;
-        border-bottom: 4px solid;
-        border-right: 4px solid transparent;
-        border-left: 4px solid transparent;
+      &--increase{
+        &::after{
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 2px;
+          vertical-align: middle;
+          border-top: 0;
+          border-bottom: 4px solid;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+        }
+      }
+      &--decrease {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 2px;
+          vertical-align: middle;
+          border-top: 4px solid;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+          
+        }
       }
     }
+  }
+  &__line{
+    margin-top: 30px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border: 0;
+    border-top: 1px solid #434857;
+    border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
