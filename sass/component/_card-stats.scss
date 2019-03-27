@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 
 .card {
-  color: #fff;
+  color: $cl-white;
   border-radius: 3px;
   $name: &;
 
@@ -21,13 +21,14 @@
     #{$name}__number{
       font-size: 2rem;
       line-height: 1.2;
-      font-weight: 400;
+      font-weight: $font-weight-normal;
     }
     #{$name}__indicator{
       display: inline-block;
       padding: .4em;
       font-size: 12px;
       line-height: 1.2;
+      margin-left: 0.5rem;
         
       &--increase{
         &::after{

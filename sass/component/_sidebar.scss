@@ -63,7 +63,7 @@
         padding: 0.375rem 0.75rem;
         font-size: 0.9rem;
         line-height: 1.5;
-        color: #fff;
+        color: $cl-white;
         background-color: #434857;
         background-clip: padding-box;
         border: 1px solid #434857;
@@ -71,7 +71,7 @@
 
         &:focus {
           color: #495057;
-          background-color: #fff;
+          background-color: $cl-white;
           border-color: #71cced;
           outline: 0;
           box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.25);
@@ -113,7 +113,7 @@
           border-radius: 0.25rem; 
           
           > a{
-            color: #fff;
+            color: $cl-white;
           }
         }
       }
@@ -123,7 +123,7 @@
         padding: 0.5rem 1rem;
         border-radius: 0.25rem; 
         transition: all 0.25s;
-        font-weight: 300;
+        font-weight: $font-weight-small;
         color: #cfd2da;
         cursor: pointer;
         font-size: 0.9rem;
@@ -131,7 +131,7 @@
         &:hover, 
         &:focus,
         &:active {
-          color: #fff;
+          color: $cl-white;
         }
       }
     }
@@ -147,8 +147,3 @@
   }
 }
 
-// RESPONSIVE
-@media screen and (max-width: 991px) {
-
-  
-}

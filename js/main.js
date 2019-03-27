@@ -1,6 +1,8 @@
 $(window).on('load', function(){
-  // datepicker
 
+  sidebarCollapse();
+
+  // datepicker
   $('#datepicker').datepicker();
 
   //chart
@@ -81,15 +83,8 @@ $(window).on('load', function(){
   // sidebar-collapse
 
   function sidebarCollapse(){
-    $('.js-btn-collaspe').on('click', function(){
-      $('.js-sidebar-collapse').toggleClass('left-sidebar__collapse--visible');
-  
-      $('.overlay-mobile').fadeToggle('200');
-  
-      $('.overlay-mobile').on('click', function(){         
-        $('.js-sidebar-collapse').removeClass('left-sidebar__collapse--visible');
-        $(this).fadeOut();
-      });
+    $('.js-btn-toggle').on('click', function(){
+      $('.js-sidebar-collapse').slideToggle();
     })
   }
   

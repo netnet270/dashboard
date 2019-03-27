@@ -48,7 +48,7 @@ mixin content()
     section.section-chart
       .row 
         each item in chart
-          .col-4 
+          .col-4.col-sm-12
             .chart 
               .chart__top 
                 canvas.chart__doughnut.js-chart(
@@ -67,16 +67,16 @@ mixin content()
       .quick-stats__header 
         h3.quick-stats__title Quick Stats
       .row
-        .col-3
+        .col-lg-3.col-md-6.col-sm-12
           .quick-stats__page
             +card-stats({title: 'page views', number: '1,293', indicator: '5,3%', increase: true, dataset:[28,68,41,43,96,45,100]})
-        .col-3
+        .col-lg-3.col-md-6.col-sm-12
           .quick-stats__downloads
             +card-stats({title: 'downloads', number: '758', indicator: '1,3%', dataset:[28,68,41,43,96,45,100]})
-        .col-3
+        .col-lg-3.col-md-6.col-sm-12
           .quick-stats__sign-ups
             +card-stats({title: 'sign-ups', number: '1,293', indicator: '6,73%', increase:true, dataset:[28,68,41,43,96,45,100]})
-        .col-3
+        .col-lg-3.col-md-6.col-sm-12
           .quick-stats__upload
             +card-stats({title: 'downloads', number: '758', indicator: '1,3%', dataset:[28,68,41,43,96,45,100]})
 
@@ -187,7 +187,7 @@ mixin content()
 
     section.table-statistic
       .row
-        .col-6
+        .col-6.col-sm-12
           .table-countries
             h4.table-countries__title Countries
             each item in countries
@@ -197,7 +197,7 @@ mixin content()
                   span.table-countries__number= item.progress
             +buttons-link({text: 'All Countries'})
 
-        .col-6
+        .col-6.col-sm-12
           .table-pages
             h4.table-pages__title Most visited pages
             each item in pages
@@ -207,7 +207,7 @@ mixin content()
                   span.table-pages__number= item.progress
             +buttons-link({text: 'View all pages'})
       .row
-        .col-12
+        .col-12.col-sm-12
           .table-devices
             h4.table-devices__title Devices and resolutions
             each item in devices

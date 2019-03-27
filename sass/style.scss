@@ -1,13 +1,13 @@
-@import 'abstracts/_variables';
-
+@import 'abstracts/variables';
+@import 'base/font';
 @import 'base/reset';
 @import 'base/global';
 
-@import 'component/_sidebar';
-@import 'component/_card-stats';
-@import 'component/_button';
-@import 'component/_content';
-
+@import 'component/sidebar';
+@import 'component/card-stats';
+@import 'component/button';
+@import 'component/content';
+@import 'component/responsive';
 
 
 
