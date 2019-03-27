@@ -18,7 +18,35 @@ $font-size-xlarge: 24px;
 $font-weight-small: 300;
 $font-weight-normal: 400;
 
+//Line-height 
+$line-height-base: 1.2;
+$line-height-medium: 1.5;
 
 //Color 
 $cl-white: #fff;
-
+$cl-white-gray: #cfd2da;
+$cl-gray:#434857;
+$cl-dark: #252830;
+$cl-green: #1BC98E;
+$cl-red: #E64759;
+$cl-yellow: #E4D836;
+$cl-purple: #9F86FF;
+$cl-blue: #1997c6;
+$cl-orange:  #ff6a00;
+$cl-text: #999;
+$cl-black: #000;
+$cl-datepicker: #ccc;
+$cl-datepicker-table:#137499;
+$cl-boder-datepicker: #126c8d;
+$cl-text-shadow: rgba(0, 0, 0, 0.25);
+$cl-field: #495057;
+$cl-boder-field: #71cced;
+$cl-link-active: #e9ecef;
+$cl-table: #1e2127;
+$cl-radient: rgba(0,0,0,.2);
+$cl-radient-date: rgba(25, 151, 198, 0.25);
+$cl-logo: #51586a;
+$cl-logo-hover: #6f7890;
+$cl-icon: #9198aa;
+$cl-card-title: rgba(255, 255, 255, 0.65);
+$cl-border-line:rgba(255, 255, 255, 0.2);

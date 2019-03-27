@@ -39,8 +39,8 @@
     }
     &__toggle{
       display: inline-block;
-      color: #434857;
-      border-color: #434857;
+      color: $cl-gray;
+      border-color: $cl-gray;
       float: right;
       padding: 0.25rem 0.75rem;
       font-size: 1.25rem;
@@ -54,8 +54,8 @@
       &:hover, 
       &:focus{
         color: $cl-white;
-        background-color: #434857;
-        border: 1px solid #ff6a00;
+        background-color: $cl-gray;
+        border: 1px solid $cl-orange;
       }
     }
 

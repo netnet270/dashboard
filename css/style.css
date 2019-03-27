@@ -126,7 +126,6 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
     display: none; } }
 
 .left-sidebar {
-  box-shadow: 6px 0 18px 0 rgba(0, 0, 0, 0.06);
   transition: width .25s ease-in;
   margin-right: 40px; }
   .left-sidebar .logo {
@@ -138,19 +137,6 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
       transition: all 0.4s; }
       .left-sidebar .logo__link:hover {
         color: #6f7890; }
-    .left-sidebar .logo__main:before {
-      position: relative;
-      top: 2px;
-      display: inline-block;
-      font-family: "toolkit-entypo";
-      speak: none;
-      font-size: 100%;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased; }
   .left-sidebar__toggle {
     display: none; }
   .left-sidebar__collapse .search-form {
@@ -266,7 +252,7 @@ a, a:hover, a:active, a:focus, button:focus, .btn:focus, .form-control:focus {
     margin-left: -1rem;
     margin-right: -1rem;
     border: 0;
-    border-top: 1px solid #434857;
+    border-top: 1px solid;
     border-top-color: rgba(255, 255, 255, 0.2); }
 
 .btn-primary {
@@ -311,7 +297,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase; }
   .main-body .header__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     line-height: 1.2;
     color: #fff;
     font-size: 2rem; }
@@ -376,7 +362,7 @@ body {
 .main-body .quick-stats__header {
   position: relative;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
   margin-top: 3rem;

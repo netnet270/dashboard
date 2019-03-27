@@ -12,7 +12,7 @@
     text-align: left;
 
     #{$name}__title{
-      color: rgba(255, 255, 255, 0.65);
+      color: $cl-card-title;
       font-size: 0.75rem;
       letter-spacing: .15em;
       text-transform: uppercase;
@@ -20,14 +20,14 @@
     
     #{$name}__number{
       font-size: 2rem;
-      line-height: 1.2;
+      line-height: $line-height-base;
       font-weight: $font-weight-normal;
     }
     #{$name}__indicator{
       display: inline-block;
       padding: .4em;
       font-size: 12px;
-      line-height: 1.2;
+      line-height: $line-height-base;
       margin-left: 0.5rem;
         
       &--increase{
@@ -54,8 +54,7 @@
           vertical-align: middle;
           border-top: 4px solid;
           border-right: 4px solid transparent;
-          border-left: 4px solid transparent;
-          
+          border-left: 4px solid transparent;          
         }
       }
     }
@@ -65,7 +64,7 @@
     margin-left: -1rem;
     margin-right: -1rem;
     border: 0;
-    border-top: 1px solid #434857;
-    border-top-color: rgba(255, 255, 255, 0.2);
+    border-top: 1px solid;
+    border-top-color: $cl-border-line;
   }
 }

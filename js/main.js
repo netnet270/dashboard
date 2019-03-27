@@ -78,7 +78,7 @@ $(window).on('load', function(){
       }
     });
   });
-
+2
   $(window).resize(function () { 
     if($(this).width() > 768 ) {
       $(".js-sidebar-collapse").show();
