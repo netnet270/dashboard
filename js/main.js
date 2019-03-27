@@ -78,6 +78,12 @@ $(window).on('load', function(){
       }
     });
   });
+
+  $(window).resize(function () { 
+    if($(this).width() > 768 ) {
+      $(".js-sidebar-collapse").show();
+    }
+  });
 })
 
   // sidebar-collapse
